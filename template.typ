@@ -58,7 +58,7 @@
   // set list(indent: 1em, body-indent: 0.8em, marker: faAngleRight)
   // 上面的语句无法精确控制图标位置, 因此改用了下列方法重写 list
   show list: it => stack(
-    spacing: 0.4em,
+    spacing: 1em,
     ..it.children.map(item => {
       grid(
         columns: (2em, 1fr),
@@ -67,7 +67,7 @@
           h(0.75em)
           fa-angle-right
         }),
-        pad(top: 0.15em, item.body),
+        pad(item.body),
       )
     }),
   )
